@@ -17,13 +17,14 @@ function NewsList() {
             <h2 className="section-title">📰 Nutt Farms Devlog</h2>
             <div className="news-grid">
                 {posts.map((post) => (
-                    <div className="news-card" key={post.slug}>
+                    <div className="card" key={post.slug}>
                         {post.image_url && (
                             <img src={post.image_url} alt={post.title} className="news-image" />
                         )}
-                        <h3 className="news-title">{post.title}</h3>
-                        <p className="news-date">{new Date(post.date).toLocaleDateString()}</p>
-                        <p className="news-excerpt">{post.excerpt}</p>
+                        <h3 className="card-title">{post.title}</h3>
+                        <p className="card-date">{new Date(post.date).toLocaleDateString()}</p>
+                        <p className="card-excerpt">{post.excerpt}</p>
+                        <a href={`/news/${post.slug}`} className="card-readmore">Read More ➤</a>
                     </div>
                 ))}
             </div>

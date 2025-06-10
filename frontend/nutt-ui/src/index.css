@@ -18,6 +18,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -46,9 +47,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -59,10 +62,90 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
+}
+
+:root {
+  --color-bg: #0c0c0c;
+  --color-purple: #2d1b4d;
+  --color-red: #ff3c38;
+  --color-gold: #d5a021;
+  --color-text: #f3f3f3;
+
+  --font-main: 'Rajdhani', sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--color-gold);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-red);
+  text-shadow: 0 0 5px var(--color-purple);
+}
+
+.card {
+  background-color: var(--color-purple);
+  color: var(--color-text);
+  border: 1px solid var(--color-gold);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(213, 160, 33, 0.2);
+  /* Gold glow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px var(--color-red);
+  border-color: var(--color-red);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.card-date {
+  font-size: 0.85rem;
+  color: var(--color-text);
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.card-excerpt {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.card-readmore {
+  color: var(--color-gold);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card-readmore:hover {
+  color: var(--color-red);
+  text-shadow: 0 0 4px var(--color-red);
 }
