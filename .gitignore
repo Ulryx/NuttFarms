@@ -131,4 +131,5 @@ dist
 
 # Ulryx
 FStuct.py
+db.sqlite3
 
